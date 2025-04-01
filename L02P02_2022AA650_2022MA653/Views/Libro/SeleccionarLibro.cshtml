@@ -1,0 +1,40 @@
+﻿@model List<L02P02_2022AA650_2022MA653.Models.libros>
+
+@{
+    ViewData["Title"] = "Comentarios por Libros";
+}
+
+<div class="container mt-4">
+    <div class="text-center">
+        <h2>Comentarios por Libros</h2>
+        <p>Seleccione el autor -> Seleccione el libro -> Se muestran los comentarios existentes -> Adicione un nuevo comentario</p>
+    </div>
+
+    <!-- Barra de progreso -->
+    <div class="d-flex justify-content-center my-4">
+        <div class="progress" style="width: 60%;">
+            <div class="progress-bar bg-success" style="width: 50%">LIBROS</div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <h4>Autor: <strong>@ViewBag.AutorNombre</strong></h4>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-header bg-dark text-white">
+            Seleccione el Libro del Autor
+        </div>
+        <ul class="list-group list-group-flush">
+            @foreach (var libro in Model)
+            {
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    @libro.nombre
+                    <a href="@Url.Action("VerComentarios", "Libros", new { idLibro = libro.id })" class="btn btn-success">
+                        Seleccionar
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
