@@ -1,3 +1,6 @@
+using L02P02_2022AA650_2022MA653.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace L02P02_2022AA650_2022MA653
 {
     public class Program
@@ -8,6 +11,12 @@ namespace L02P02_2022AA650_2022MA653
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            // Inyeccion
+            builder.Services.AddDbContext<ClaseContext>(options =>
+            options.UseSqlServer(
+                builder.Configuration.GetConnectionString("DbConnection"))
+            );
 
             var app = builder.Build();
 
