@@ -15,6 +15,6 @@ namespace L02P02_2022AA650_2022MA653.Models
         public DateTime CreatedAt { get; set; }
 
         [ForeignKey("IdLibro")]
-        public Libro Libro { get; set; }
+        public libros Libro { get; set; }
     }
 }

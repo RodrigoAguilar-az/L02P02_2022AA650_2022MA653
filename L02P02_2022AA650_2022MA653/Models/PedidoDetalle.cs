@@ -14,6 +14,6 @@ namespace L02P02_2022AA650_2022MA653.Models
         [ForeignKey("IdPedido")]
         public PedidoEncabezado PedidoEncabezado { get; set; }
         [ForeignKey("IdLibro")]
-        public Libro Libro { get; set; }
+        public libros Libro { get; set; }
     }
 }
