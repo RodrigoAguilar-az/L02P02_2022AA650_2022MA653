@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace L02P02_2022AA650_2022MA653.Models
 {
+    [Table("comentarios_libros")]
     public class comentarios_libros
     {
         [Key]
