@@ -3,10 +3,10 @@
     ViewData["Title"] = "Listado de Autores";
 }
 
-<link rel="stylesheet" href="~/css/Style.css" />
+<link rel="stylesheet" href="~/css/style.css" />
 
-<div class="container">
-    <ul class="progressbar">
+<div class="pro-container text-center">
+    <ul class="progressbar mb-4">
         <li class="active">Autores</li>
         <li>Libros</li>
         <li>Comentarios Existentes</li>
@@ -25,8 +25,8 @@
                     @foreach (var autor in Model)
                     {
                         <tr>
-                            <td>@autor.autor</td>
-                            <td>
+                            <td class="text-start">@autor.autor</td>
+                            <td class="text-end">
                                 @Html.ActionLink("Seleccionar", "Seleccionar", "Autor", new { id = autor.id }, new { @class = "btn btn-success" })
                             </td>
                         </tr>
