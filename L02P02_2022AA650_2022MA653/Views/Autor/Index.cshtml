@@ -3,36 +3,31 @@
     ViewData["Title"] = "Listado de Autores";
 }
 
-<link rel="stylesheet" href="~/css/style.css" />
+<link rel="stylesheet" href="~/css/Style.css" />
 
-<div class="container">
-    <ul class="progressbar">
+<div class="pro-container text-center">
+    <ul class="progressbar mb-4">
         <li class="active">Autores</li>
         <li>Libros</li>
         <li>Comentarios Existentes</li>
         <li>Nuevo Comentario</li>
     </ul>
-    <br />
-    <div class="card">
-        <div class="card-header">
-            <h2 class="text-primary">Autor</h2>
+
+    <div class="card mt-5 shadow">
+        <div class="card-header bg-white text-start">
+            <h3 class="text-primary">Autor</h3>
         </div>
         <div class="card-body">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Nombre del Autor</th>
-                        <th></th>
-                    </tr>
+            <table class="table table-hover">
+                <thead class="table-light">
                 </thead>
                 <tbody>
                     @foreach (var autor in Model)
                     {
                         <tr>
-                            <td>@autor.autor</td>
-                            <td>
+                            <td class="text-start">@autor.autor</td>
+                            <td class="text-end">
                                 @Html.ActionLink("Seleccionar", "Seleccionar", "Autor", new { id = autor.id }, new { @class = "btn btn-success" })
-
                             </td>
                         </tr>
                     }
