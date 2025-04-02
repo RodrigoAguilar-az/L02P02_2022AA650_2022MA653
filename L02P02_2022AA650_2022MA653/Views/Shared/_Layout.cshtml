@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - L02P02_2022AA650_2022MA653</title>
+    <title>@ViewData["Title"] - Laboratorio-2 </title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/L02P02_2022AA650_2022MA653.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light text-light bg-dark border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">L02P02_2022AA650_2022MA653</a>
+                <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">Unicaes</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,13 +20,11 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Autor" asp-action="Index">Autores</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Autor" asp-action="Index">Autores</a>
                         </li>
                     </ul>
                 </div>
@@ -34,14 +32,21 @@
         </nav>
     </header>
     <div class="container">
+
+        <div class="bg-dark text-white py-4 text-center">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Facaai.org.gt%2Fwp-content%2Fuploads%2F2020%2F02%2FLogo-UNICAES-OFICIAL-923x1024.png&f=1&nofb=1&ipt=2526f463dfe0a12a65a9e4003786f38fd3508f48e3fbeb5dbfda43da6a96228f&ipo=images" alt="Logo UNICAES" class="mb-2" style="width: 80px; height: auto;" />
+            <h2 class="mt-2">Comentarios por Libros</h2>
+            <p class="text-light">Seleccione el autor -> Seleccione el Libro -> Se muestran los comentarios existentes -> Adicione un nuevo comentario</p>
+        </div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-light bg-dark p-3 text-center">
         <div class="container">
-            &copy; 2025 - L02P02_2022AA650_2022MA653 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <h5>2022-AA-650 Oscar Rodrigo Aguilar Alvarez</h5>
+            <h5>2022-AA-653 Juan Carlos Monroy Acevedo</h5>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
