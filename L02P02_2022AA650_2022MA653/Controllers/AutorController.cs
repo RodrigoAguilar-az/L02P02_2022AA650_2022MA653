@@ -26,7 +26,8 @@ namespace L02P02_2022AA650_2022MA653.Controllers
                 return NotFound();
             }
 
-            return RedirectToAction("Index", "Libros", new { idAutor = id });
+            return RedirectToAction("Index", "Libro", new { idAutor = id });
+
         }
     }
 }

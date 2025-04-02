@@ -5,17 +5,14 @@
 }
 
 <div class="container mt-4">
-    <div class="text-center">
-        <h2>Comentarios por Libros</h2>
-        <p>Seleccione el autor -> Seleccione el libro -> Se muestran los comentarios existentes -> Adicione un nuevo comentario</p>
-    </div>
-
     <!-- Barra de progreso -->
-    <div class="d-flex justify-content-center my-4">
-        <div class="progress" style="width: 60%;">
-            <div class="progress-bar bg-success" style="width: 50%">LIBROS</div>
-        </div>
-    </div>
+    <ul class="progressbar">
+        <li class="active">Autores</li>
+        <li>Libros</li>
+        <li>Comentarios Existentes</li>
+        <li>Nuevo Comentario</li>
+    </ul>
+    <br />
 
     <div class="mt-4">
         <h4>Autor: <strong>@ViewBag.AutorNombre</strong></h4>

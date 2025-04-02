@@ -20,12 +20,20 @@ namespace L02P02_2022AA650_2022MA653.Controllers
                                  .Where(l => l.id_autor == idAutor)
                                  .ToList();
 
-            var autor = _context.Autores.FirstOrDefault(a => a.id == idAutor);
+            var autor = _context.autores.FirstOrDefault(a => a.id == idAutor);
 
             ViewBag.AutorNombre = autor?.autor ?? "Autor Desconocido";
 
             return View(libros);
         }
 
+        public IActionResult Index(int idAutor)
+        {
+            var libros = _context.Libros.Where(l => l.id_autor == idAutor).ToList();
+            var autor = _context.autores.FirstOrDefault(a => a.id == idAutor);
+
+            ViewBag.Autor = autor?.autor ?? "Desconocido";
+            return View(libros);
+        }
     }
 }

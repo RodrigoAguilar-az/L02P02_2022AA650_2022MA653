@@ -1,0 +1,44 @@
+﻿@model List<L02P02_2022AA650_2022MA653.Models.libros>
+@{
+    ViewData["Title"] = "Listado de Libros";
+}
+
+<link rel="stylesheet" href="~/css/style.css" />
+
+<div class="container">
+    <ul class="progressbar">
+        <li>Autores</li>
+        <li class="active">Libros</li>
+        <li>Comentarios Existentes</li>
+        <li>Nuevo Comentario</li>
+    </ul>
+    <br />
+    <h2 class="text-primary">Libros del Autor: @ViewBag.Autor</h2>
+    <div class="card">
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre del Libro</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var libro in Model)
+                    {
+                        <tr>
+                            <td>@libro.nombre</td>
+                            <td>@libro.descripcion</td>
+                            <td>@libro.precio.ToString("C")</td>
+                            <td>
+                                @Html.ActionLink("Ver Comentarios", "Index", "Comentarios", new { idLibro = libro.id }, new { @class = "btn btn-info" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
